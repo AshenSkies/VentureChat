@@ -119,6 +119,10 @@
     		<id>papermc</id>
     		<url>https://papermc.io/repo/repository/maven-public/</url>
 		</repository>
+        <repository>
+            <id>localrepository</id>
+            <url>file://${project.basedir}/lib</url>
+        </repository>
     </repositories>
     <dependencies>
     	<dependency>
@@ -154,7 +158,7 @@
         <dependency>
             <groupId>com.comphenix.protocol</groupId>
             <artifactId>ProtocolLib</artifactId>
-            <version>5.0.0-SNAPSHOT</version>
+            <version>5.0.0</version>
         </dependency>
         <!--These are long depreciated. I would've removed them, but that is outside the scope of what I want to do here.
         I am using the latest builds of these plugins to be published to SpigotMC.-->
@@ -162,15 +166,11 @@
             <groupId>com.massivecraft.factions</groupId>
             <artifactId>Factions</artifactId>
             <version>2.14.0</version>
-            <scope>system</scope>
-            <systemPath>${basedir}/lib/Factions.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>com.massivecraft.massivecore</groupId>
             <artifactId>MassiveCore</artifactId>
             <version>2.14.0</version>
-            <scope>system</scope>
-            <systemPath>${basedir}/lib/MassiveCore.jar</systemPath>
         </dependency>
         <!--Back to safety.-->
         <dependency>
